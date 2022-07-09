@@ -8,51 +8,52 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="../images/favicon-32x32.png"
     />
 
     <title>E-commerce product page</title>
     <link rel="stylesheet" href="stylesheet/style.css" />
   </head>
   <body>
+
     <!-- LIGHTBOX DISPLAY  -->
 
     <div id="lightbox">
       <div class="lightbox-container">
         <div class="main-display">
           <a href="#" id="close-icon"
-            ><img src="/images/icon-close.svg" alt="icon-close"
+            ><img src="./images/icon-close.svg" alt="icon-close"
           /></a>
           <a href="#" id="icon-next"
-            ><img src="/images/icon-next.svg" alt="icon-next"
+            ><img src="./images/icon-next.svg" alt="icon-next"
           /></a>
           <a href="#" id="icon-prev"
-            ><img src="/images/icon-previous.svg" alt="icon-previous"
+            ><img src="./images/icon-previous.svg" alt="icon-previous"
           /></a>
           <img
             class="image"
-            src="/images/image-product-1.jpg"
+            src="./images/image-product-1.jpg"
             alt="image-product-1"
           />
           <div class="lightbox-thumbnails">
             <a href="#"
               ><img
-                src="/images/image-product-1-thumbnail.jpg"
+                src="./images/image-product-1-thumbnail.jpg"
                 alt="product1-thumbnail"
             /></a>
             <a href="#"
               ><img
-                src="/images/image-product-2-thumbnail.jpg"
+                src="./images/image-product-2-thumbnail.jpg"
                 alt="product2-thumbnail"
             /></a>
             <a href="#"
               ><img
-                src="/images/image-product-3-thumbnail.jpg"
+                src="./images/image-product-3-thumbnail.jpg"
                 alt="product3-thumbnail"
             /></a>
             <a href="#"
               ><img
-                src="/images/image-product-4-thumbnail.jpg"
+                src="./images/image-product-4-thumbnail.jpg"
                 alt="product4-thumbnail"
             /></a>
           </div>
@@ -63,10 +64,10 @@
 
     <!-- Cart PopUp1 -->
     <div class="cart-container">
-    <p>Cart</p>
+      <p>Cart</p>
       <div>
         <div class="cart-wrapper">
-          <img class="cartproductimage" style="width: 50px; height:50px; border-radius: 5px;" src="/images/image-product-1-thumbnail.jpg" alt="image-product-1">
+          <img class="cartproductimage" style="width: 50px; height:50px; border-radius: 5px;" src="./images/image-product-1-thumbnail.jpg" alt="image-product-1">
           <div class="cart-details">
             <p>Fall Limited Edition Sneakers</p>
             <div class="cart-calc">
@@ -74,17 +75,25 @@
               <p style="font-weight:bold;">$375</p>
             </div>
           </div>
-          <img style="width: 15px; height:15px;" src="/images/icon-delete.svg" alt="icon-delete">
+          <img style="width: 15px; height:15px;" src="./images/icon-delete.svg" alt="icon-delete">
         </div>
         <p class="checkout">Checkout</p>
       </div>
     </div>
+
+    <div class="emptycart-container">
+      <p>Cart</p>
+      <div>
+        <p class="emptynote">Your cart is empty</p>
+      </div>
+    </div>
     <!-- Cart Popup1 Ends -->
+
     <main>
       <header>
         <div class="subheader">
           <div class="nav">
-            <img src="/images/logo.svg" alt="logo" />
+            <img src="./images/logo.svg" alt="logo"/>
             <ul>
               <li><a href="#"> Collection</a></li>
               <li><a href="#">Men</a></li>
@@ -94,8 +103,9 @@
             </ul>
           </div>
           <div class="header-imgs">
-            <a href="#" class="cartimage"><img src="/images/icon-cart.svg" alt="cart"/></a>
-            <a href="#"><img src="/images/image-avatar.png" alt="avatar" /></a>
+              <a href="#" class="cartimage"><img src="./images/icon-cart.svg" alt="cart"/><div class="cart-notif"></div>
+              </a>
+              <a href="#"><img src="./images/image-avatar.png" alt="avatar" /></a>
           </div>
         </div>
       </header>
@@ -104,26 +114,26 @@
         <div class="container">
           <div class="image-display-container">
             <div class="image-display">
-              <img src="/images/image-product-1.jpg" alt="image-product-1" />
+              <img src="./images/image-product-1.jpg" alt="image-product-1" />
               <div class="thumbnails">
                 <a href="#"
                   ><img
-                    src="/images/image-product-1-thumbnail.jpg"
+                    src="./images/image-product-1-thumbnail.jpg"
                     alt="product1-thumbnail"
                 /></a>
                 <a href="#"
                   ><img
-                    src="/images/image-product-2-thumbnail.jpg"
+                    src="./images/image-product-2-thumbnail.jpg"
                     alt="product2-thumbnail"
                 /></a>
                 <a href="#"
                   ><img
-                    src="/images/image-product-3-thumbnail.jpg"
+                    src="./images/image-product-3-thumbnail.jpg"
                     alt="product3-thumbnail"
                 /></a>
                 <a href="#"
                   ><img
-                    src="/images/image-product-4-thumbnail.jpg"
+                    src="./images/image-product-4-thumbnail.jpg"
                     alt="product4-thumbnail"
                 /></a>
               </div>
@@ -145,12 +155,12 @@
               <p class="oldprice"><del>$250.00</del></p>
               <div class="check">
                 <div class="quantity">
-                  <img src="/images/icon-minus.svg" alt="minus-sign" />
+                  <img class="minus" src="./images/icon-minus.svg" alt="minus-sign" />
                   <span class="quantityNumber">0</span>
-                  <img src="/images/icon-plus.svg" alt="plus-sign" />
+                  <img class="plus" src="./images/icon-plus.svg" alt="plus-sign" />
                 </div>
                 <a class="addToCart">
-                  <img src="/images/icon-cart2.svg" alt="cart" />
+                  <img src="./images/icon-cart2.svg" alt="cart" />
                   <p>Add to cart</p>
                 </a>
               </div>

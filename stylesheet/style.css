@@ -68,6 +68,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
 }
 .subheader .header-imgs img {
   max-width: 50px;
@@ -183,6 +184,7 @@ header {
   padding: 15px;
   border-radius: 10px;
   width: 37%;
+  text-align: center;
 }
 .check .quantity span {
   margin-inline: 20%;
@@ -204,6 +206,8 @@ header {
 }
 .check .addToCart:hover {
   cursor: pointer;
+  background-color: var(--orange);
+  box-shadow: 0 0 10px var(--orange);
 }
 .check p {
   margin: 0;
@@ -297,9 +301,17 @@ header {
   opacity: 0.4;
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .cart-container {
   display: none;
-  width: 270px;
+  width: 290px;
   height: 200px;
   background-color: white;
   border-radius: 10px;
@@ -307,12 +319,42 @@ header {
   position: absolute;
   top: 80px;
   right: 150px;
+  animation: fadeIn 500ms;
+  -webkit-animation: fadeIn 500ms;
+  -moz-animation: fadeIn 500ms;
+  -o-animation: fadeIn 500ms;
+  -ms-animation: fadeIn 500ms;
 }
 .cart-container > p {
   padding: 10px;
   padding-bottom: 25px;
   border-bottom: 1px solid var(--grayish-blue);
   font-weight: bold;
+  font-size: 20px;
+}
+
+.emptycart-container {
+  display: none;
+  width: 290px;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px grey;
+  position: absolute;
+  top: 80px;
+  right: 150px;
+  animation: fadeIn 500ms;
+  -webkit-animation: fadeIn 500ms;
+  -moz-animation: fadeIn 500ms;
+  -o-animation: fadeIn 500ms;
+  -ms-animation: fadeIn 500ms;
+}
+.emptycart-container > p {
+  padding: 10px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--grayish-blue);
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .cart-wrapper {
@@ -349,6 +391,29 @@ header {
   font-size: 16px;
   margin: auto;
   margin-top: 10px;
+}
+
+.cartimage {
+  position: relative;
+}
+
+.cart-notif {
+  position: absolute;
+  display: none;
+  width: 13px;
+  height: 13px;
+  text-align: center;
+  top: -5px;
+  right: 15px;
+  color: white;
+  background-color: var(--orange);
+  z-index: 1;
+  border-radius: 50%;
+  font-size: 9px;
+}
+
+.display {
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */
