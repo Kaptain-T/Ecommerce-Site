@@ -1,3 +1,6 @@
+const imageDisplay = document.querySelector(".image-display")
+const lightbox = document.querySelector(".lightbox")
+const closeicon = document.querySelector(".closeicon")
 const cartImage = document.querySelector('.cartimage');
 const cart = document.querySelector(".cart-container");
 const minus = document.querySelector(".minus");
@@ -38,12 +41,6 @@ addToCart.addEventListener("click", function(){
 })
 
 
-
-
-
-
-
-
 cartImage.addEventListener('click', function(){
     if (cartNotif.innerHTML > 0) {
         if (cart.classList.contains("display")) {
@@ -58,6 +55,22 @@ cartImage.addEventListener('click', function(){
           emptyCart.classList.add("display");
         }
     }
-    
-    
 });
+
+// ****************** LIGHTBOX DISPLAY AND FUNCTIONALITY ************
+imageDisplay.addEventListener("click", function(){
+    lightbox.classList.add("display")
+})
+closeicon.addEventListener("click", function(){
+    lightbox.classList.remove("display")
+})
+
+closeicon.onmouseover = function(){onMouseOver()}
+closeicon.onmouseout = function(){onMouseOut()}
+
+function onMouseOver(){
+    closeicon.setAttribute("src", "./images/icon-close-orange.svg")
+}
+function onMouseOut() {
+  closeicon.setAttribute("src", "./images/icon-close.svg");
+}
