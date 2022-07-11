@@ -513,6 +513,25 @@ header {
     margin: 25px 0;
   }
 }
+.attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
+  background-color: var(--orange);
+  height: 40px;
+  margin-top: 10px;
+}
+.attribution a {
+  color: red;
+  margin-left: 5px;
+  font-weight: bold;
+}
+.attribution a:hover {
+  color: rgb(101, 3, 3);
+}
+
 .mobilenav {
   display: none;
   position: absolute;
