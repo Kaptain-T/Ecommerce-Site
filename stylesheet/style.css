@@ -15,7 +15,7 @@
 body {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   font-size: 16px;
   font-family: "Kumbh Sans";
   overflow-x: hidden;
@@ -231,39 +231,7 @@ header {
   background-color: hsla(0deg, 0%, 0%, 0.75);
 }
 
-#close-icon {
-  position: absolute;
-  top: 100px;
-  left: 59.5%;
-}
-
-#icon-next {
-  position: absolute;
-  top: 270px;
-  left: 59.5%;
-  padding: 5px 10px;
-  border-radius: 50%;
-  background-color: white;
-}
-#icon-next img {
-  width: 10px;
-  height: 10px;
-}
-
-#icon-prev {
-  position: absolute;
-  top: 270px;
-  left: 38.2%;
-  border-radius: 50%;
-  background-color: white;
-  padding: 5px 10px;
-}
-#icon-prev img {
-  width: 10px;
-  height: 10px;
-}
-
-.lightbox-container {
+#lightbox-container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -272,11 +240,57 @@ header {
 }
 
 .main-display {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  z-index: 2;
+  z-index: 1;
+}
+
+#close-icon {
+  position: absolute;
+  top: -30px;
+  right: 0;
+}
+#close-icon:hover {
+  transform: scale(1.08);
+}
+
+#icon-next {
+  position: absolute;
+  top: 140px;
+  right: -15px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: var(--pale-orange);
+}
+#icon-next:hover {
+  transform: scale(1.1);
+  background-color: var(--orange);
+  filter: opacity(0.6);
+}
+#icon-next img {
+  width: 10px;
+  height: 10px;
+}
+
+#icon-prev {
+  position: absolute;
+  top: 140px;
+  left: -15px;
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px 10px;
+}
+#icon-prev:hover {
+  transform: scale(1.1);
+  background-color: var(--pale-orange);
+  opacity: 0.6;
+}
+#icon-prev img {
+  width: 10px;
+  height: 10px;
 }
 
 .image {
@@ -305,7 +319,7 @@ header {
 .lightbox-thumbnails a:focus img, .lightbox-thumbnails a:active img {
   filter: brightness(120%);
   outline: 2px solid var(--orange);
-  opacity: 0.4;
+  opacity: 0.7;
 }
 
 @keyframes fadeIn {
@@ -331,8 +345,9 @@ header {
   -moz-animation: fadeIn 500ms;
   -o-animation: fadeIn 500ms;
   -ms-animation: fadeIn 500ms;
+  z-index: 3;
 }
-.cart-container header > p {
+.cart-container > p {
   padding: 20px 0 15px 20px;
   border-bottom: 1px solid var(--grayish-blue);
   font-weight: bold;
@@ -354,6 +369,7 @@ header {
   -moz-animation: fadeIn 500ms;
   -o-animation: fadeIn 500ms;
   -ms-animation: fadeIn 500ms;
+  z-index: 3;
 }
 .emptycart-container > p {
   padding: 20px 0 15px 20px;
@@ -430,8 +446,176 @@ header {
   font-size: 9px;
 }
 
+.menu {
+  display: none;
+}
+
+.slide {
+  display: none;
+  width: 290px;
+  height: 300px;
+}
+
+.slide-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
 .display {
   display: block;
+}
+
+#display {
+  display: block;
+}
+
+.lightboxcloneCover {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  #section {
+    width: 100%;
+    margin: 0;
+  }
+  main {
+    padding: 0;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .lightboxcloneCover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .lightboxcloneCover #icon-prev {
+    top: 50%;
+    left: 8%;
+  }
+  .lightboxcloneCover #icon-next {
+    top: 50%;
+    right: 8%;
+  }
+  .lightboxcloneCover .image {
+    width: 500px;
+    height: 500px;
+  }
+  .lightboxcloneCover {
+    width: 100%;
+  }
+  .image-display-container {
+    display: none;
+  }
+  .product-info-container {
+    width: 85%;
+    margin: 25px 0;
+  }
+}
+.mobilenav {
+  display: none;
+  position: absolute;
+  z-index: 4;
+  background-color: hsla(0deg, 0%, 0%, 0.75);
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
+.mobilenav > div {
+  background-color: white;
+  width: 200px;
+  height: 100vh;
+}
+.mobilenav img {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin: 20px 10px;
+}
+.mobilenav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.mobilenav ul li {
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px;
+}
+.mobilenav .display {
+  display: block;
+}
+
+@media screen and (max-width: 650px) {
+  .nav ul {
+    display: none;
+  }
+  .menu {
+    display: inline-block;
+    margin-left: 20px;
+    margin-right: 0;
+  }
+  .lightboxcloneCover {
+    width: 100vw;
+  }
+  .lightboxcloneCover .image {
+    width: 100vw;
+    height: 450px;
+    border-radius: 0;
+  }
+  .check {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+    align-items: center;
+    gap: 20px;
+  }
+  .check .quantity {
+    background-color: var(--light-grayish-blue);
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  .check .quantity span {
+    margin-inline: 20%;
+  }
+  .check .quantity img:hover {
+    cursor: pointer;
+  }
+  .check .addToCart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+  }
+  .check .addToCart:hover {
+    cursor: pointer;
+    background-color: var(--orange);
+    box-shadow: 0 0 10px var(--orange);
+  }
+}
+@media screen and (max-width: 450px) {
+  .lightboxcloneCover .image {
+    width: 100vw;
+    height: 80vw;
+    border-radius: 0;
+  }
+  .cart-container,
+.emptycart-container {
+    width: calc(100vw - 40px);
+    height: 70vw;
+    top: 70px;
+    left: 30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

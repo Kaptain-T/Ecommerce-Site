@@ -15,47 +15,64 @@
     <link rel="stylesheet" href="stylesheet/style.css" />
   </head>
   <body>
-
+    <!-- MOBILE NAV -->
+    <div class="mobilenav">
+      <div>
+        <img class="mobilemenuclose" src="./images//icon-close.svg" alt="icon-close">
+        <ul>
+          <li><a href="#"> Collection</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    
     <!-- LIGHTBOX DISPLAY  -->
-
-    <div class="lightbox">
-      <div class="lightbox-container">
-        <div class="main-display">
-          <a href="#" id="close-icon"
-            ><img class="closeicon" src="./images/icon-close.svg" alt="icon-close"
-          /></a>
-          <a href="#" id="icon-next"
-            ><img src="./images/icon-next.svg" alt="icon-next"
-          /></a>
-          <a href="#" id="icon-prev"
-            ><img src="./images/icon-previous.svg" alt="icon-previous"
-          /></a>
-          <img
-            class="image"
-            src="./images/image-product-1.jpg"
-            alt="image-product-1"
-          />
-          <div class="lightbox-thumbnails">
-            <a href="#"
-              ><img
-                src="./images/image-product-1-thumbnail.jpg"
-                alt="product1-thumbnail"
+    <div class="lightboxCover">
+      <div class="lightbox">
+        <div id="lightbox-container">
+          <div class="main-display">
+            <a href="#" id="close-icon"
+              ><img class="closeicon" src="./images/icon-close.svg" alt="icon-close"
             /></a>
-            <a href="#"
-              ><img
-                src="./images/image-product-2-thumbnail.jpg"
-                alt="product2-thumbnail"
+            <a href="#" id="icon-next"><img src="./images/icon-next.svg" alt="icon-next"
             /></a>
-            <a href="#"
-              ><img
-                src="./images/image-product-3-thumbnail.jpg"
-                alt="product3-thumbnail"
+            <a href="#" id="icon-prev" onclick="backwardSlide()"
+              ><img src="./images/icon-previous.svg" alt="icon-previous"
             /></a>
-            <a href="#"
-              ><img
-                src="./images/image-product-4-thumbnail.jpg"
-                alt="product4-thumbnail"
-            /></a>
+            <img
+              class="image"
+              src="./images/image-product-1.jpg"
+              alt="image-product-1"
+            />
+            <div class="slide"><img class="slide-image" src="./images/image-product-1.jpg" alt="image-product-1"></div>
+            <div class="slide"><img class="slide-image" src="./images/image-product-2.jpg" alt="image-product-2"></div>
+            <div class="slide"><img class="slide-image" src="./images/image-product-3.jpg" alt="image-product-3"></div>
+            <div class="slide"><img class="slide-image" src="./images/image-product-4.jpg" alt="image-product-4"></div>
+            <div class="lightbox-thumbnails">
+              <a href="#"
+                ><img onclick="preview();toSlide(0)" class="preview"
+                  src="./images/image-product-1-thumbnail.jpg"
+                  alt="product1-thumbnail"
+              /></a>
+              <a href="#"
+                ><img onclick="preview();toSlide(1)" class="preview"
+                  src="./images/image-product-2-thumbnail.jpg"
+                  alt="product2-thumbnail"
+              /></a>
+              <a href="#"
+                ><img onclick="preview();toSlide(2)" class="preview"
+                  src="./images/image-product-3-thumbnail.jpg"
+                  alt="product3-thumbnail"
+              /></a>
+              <a href="#"
+                ><img onclick="preview();toSlide(3)" class="preview"
+                  src="./images/image-product-4-thumbnail.jpg"
+                  alt="product4-thumbnail"
+              /></a>
+            </div>
           </div>
         </div>
       </div>
@@ -93,6 +110,7 @@
       <header>
         <div class="subheader">
           <div class="nav">
+            <img class="menu" src="./images/icon-menu.svg" alt="menu">
             <img src="./images/logo.svg" alt="logo"/>
             <ul>
               <li><a href="#"> Collection</a></li>
@@ -112,27 +130,49 @@
 
       <div id="section">
         <div class="container">
+
+  <!-- LIGHTBOX CLONE FOR MOBILE  -->
+  <!-- It will be replacing image-display-container on screens < 1024px -->
+  <!-- functions not needed were deleted (like the close button for lightbox and list of the other images)-->
+          <div class="lightboxcloneCover">
+            <div class="lightboxclone">
+                <div class="main-display">
+                  <a href="#" id="icon-next"><img src="./images/icon-next.svg" alt="icon-next"
+                  /></a>
+                  <a href="#" id="icon-prev" onclick="backwardSlide()"
+                    ><img src="./images/icon-previous.svg" alt="icon-previous"
+                  /></a>
+                  <img
+                    class="image"
+                    src="./images/image-product-1.jpg"
+                    alt="image-product-1"
+                  />
+                </div>
+            </div>
+          </div>
+  <!-- LIGHTBOX CLONE ENDS -->
+
           <div class="image-display-container">
             <div class="image-display">
-              <img src="./images/image-product-1.jpg" alt="image-product-1" />
+              <img onclick="preview();toSlide(0)" class="preview" src="./images/image-product-1.jpg" alt="image-product-1" />
               <div class="thumbnails">
                 <a href="#"
-                  ><img
-                    src="./images/image-product-1-thumbnail.jpg"
+                  ><img onclick="preview();toSlide(0)"
+                    src="./images/image-product-1-thumbnail.jpg" class="preview"
                     alt="product1-thumbnail"
                 /></a>
                 <a href="#"
-                  ><img
+                  ><img onclick="preview();toSlide(1)" class="preview"
                     src="./images/image-product-2-thumbnail.jpg"
                     alt="product2-thumbnail"
                 /></a>
                 <a href="#"
-                  ><img
+                  ><img onclick="preview();toSlide(2)" class="preview"
                     src="./images/image-product-3-thumbnail.jpg"
                     alt="product3-thumbnail"
                 /></a>
                 <a href="#"
-                  ><img
+                  ><img onclick="preview();toSlide(3)" class="preview"
                     src="./images/image-product-4-thumbnail.jpg"
                     alt="product4-thumbnail"
                 /></a>
