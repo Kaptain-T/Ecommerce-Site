@@ -621,6 +621,12 @@ header {
     background-color: var(--orange);
     box-shadow: 0 0 10px var(--orange);
   }
+  .attribution {
+    height: 70px;
+    margin-top: 20px;
+    border-radius: 10px 10px 0 0;
+    font-size: 12px;
+  }
 }
 @media screen and (max-width: 450px) {
   .lightboxcloneCover .image {
