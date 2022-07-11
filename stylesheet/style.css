@@ -257,7 +257,7 @@ header {
   transform: scale(1.08);
 }
 
-#icon-next {
+.icon-next {
   position: absolute;
   top: 140px;
   right: -15px;
@@ -265,17 +265,17 @@ header {
   border-radius: 50%;
   background-color: var(--pale-orange);
 }
-#icon-next:hover {
+.icon-next:hover {
   transform: scale(1.1);
   background-color: var(--orange);
   filter: opacity(0.6);
 }
-#icon-next img {
+.icon-next img {
   width: 10px;
   height: 10px;
 }
 
-#icon-prev {
+.icon-prev {
   position: absolute;
   top: 140px;
   left: -15px;
@@ -283,12 +283,12 @@ header {
   background-color: white;
   padding: 5px 10px;
 }
-#icon-prev:hover {
+.icon-prev:hover {
   transform: scale(1.1);
   background-color: var(--pale-orange);
   opacity: 0.6;
 }
-#icon-prev img {
+.icon-prev img {
   width: 10px;
   height: 10px;
 }
@@ -490,11 +490,11 @@ header {
     align-items: center;
     justify-content: center;
   }
-  .lightboxcloneCover #icon-prev {
+  .lightboxcloneCover .icon-prev {
     top: 50%;
     left: 8%;
   }
-  .lightboxcloneCover #icon-next {
+  .lightboxcloneCover .icon-next {
     top: 50%;
     right: 8%;
   }

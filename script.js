@@ -13,7 +13,8 @@ const emptyCart = document.querySelector(".emptycart-container");
 const slides = document.getElementsByClassName("slide");
 const slidesimage = document.getElementsByClassName("slide-image");
 const previews = document.getElementsByClassName("preview");
-const iconnext = document.querySelector("#icon-next");
+const iconnext = document.querySelector(".icon-next");
+const iconprev = document.querySelector(".icon-prev");
 const menu = document.querySelector(".menu");
 const mobilenav = document.querySelector(".mobilenav");
 const mobilemenuclose = document.querySelector(".mobilemenuclose");
@@ -101,44 +102,15 @@ iconnext.addEventListener("click", function () {
   }
 });
 
-// let source = slidesimage[a].getAttribute("src");
-// image.setAttribute("src", source);
-
-function backwardSlide(b) {
-  for (let b = 3; b > -1; b--) {
-    let source = slidesimage[b].getAttribute("src");
-    console.log(b);
-    image.setAttribute("src", source);
+iconprev.addEventListener("click", function () {
+  if (image.getAttribute("src") === "./images/image-product-4.jpg") {
+    image.setAttribute("src", "./images/image-product-3.jpg");
+  } else if (image.getAttribute("src") === "./images/image-product-3.jpg") {
+    image.setAttribute("src", "./images/image-product-2.jpg");
+  } else if (image.getAttribute("src") === "./images/image-product-2.jpg") {
+    image.setAttribute("src", "./images/image-product-1.jpg");
   }
-}
-
-// function showslide(n){
-
-//     // for (let n = 0; n < slides.length; n++){
-
-//     // }
-
-//     if (n > slides.length) {
-//        slideIndex = 1;
-//     }
-
-//     if (n < 1) {
-//   	slideIndex = slides.length;
-//     }
-
-// //     for (let i = 0; i < slides.length; i++) {
-// //         slides[i].style.display = "none";
-// //     }
-// //     for (let i = 0; i < preview.length; i++) {
-// //         preview[i].className = preview[i].className.replace(' active', '');
-// //     }
-
-// //     slides[slideIndex - 1].style.display = 'block';
-// //     preview[slideIndex - 1].className += ' active';
-
-// }
-
-// // showslide(slideIndex);
+});
 
 // Mobile Nav Toggle
 
