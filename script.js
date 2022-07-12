@@ -18,7 +18,10 @@ const iconprev = document.querySelector(".icon-prev");
 const menu = document.querySelector(".menu");
 const mobilenav = document.querySelector(".mobilenav");
 const mobilemenuclose = document.querySelector(".mobilemenuclose");
-const slideIndex = 1;
+const iconnext4mobile = document.querySelector(".icon-next4mobile");
+const iconprev4mobile = document.querySelector(".icon-prev4mobile");
+const imagemobile = document.querySelector(".imagemobile");
+
 let x = 0
 
 // ************* ADD TO CART ***************
@@ -99,6 +102,20 @@ iconnext.addEventListener("click", function () {
     image.setAttribute("src", "./images/image-product-3.jpg");
   } else if (image.getAttribute("src") === "./images/image-product-3.jpg") {
     image.setAttribute("src", "./images/image-product-4.jpg");
+  } else if (image.getAttribute("src") === "./images/image-product-4.jpg") {
+    image.setAttribute("src", "./images/image-product-1.jpg");
+  }
+});
+
+iconnext4mobile.addEventListener("click", function () {
+  if (imagemobile.getAttribute("src") === "./images/image-product-1.jpg") {
+    imagemobile.setAttribute("src", "./images/image-product-2.jpg");
+  } else if (imagemobile.getAttribute("src") === "./images/image-product-2.jpg") {
+    imagemobile.setAttribute("src", "./images/image-product-3.jpg");
+  } else if (imagemobile.getAttribute("src") === "./images/image-product-3.jpg") {
+    imagemobile.setAttribute("src", "./images/image-product-4.jpg");
+  }else if (imagemobile.getAttribute("src") === "./images/image-product-4.jpg") {
+    imagemobile.setAttribute("src", "./images/image-product-1.jpg");
   }
 });
 
@@ -109,6 +126,20 @@ iconprev.addEventListener("click", function () {
     image.setAttribute("src", "./images/image-product-2.jpg");
   } else if (image.getAttribute("src") === "./images/image-product-2.jpg") {
     image.setAttribute("src", "./images/image-product-1.jpg");
+  } else if (image.getAttribute("src") === "./images/image-product-1.jpg") {
+    image.setAttribute("src", "./images/image-product-4.jpg");
+  }
+});
+
+iconprev4mobile.addEventListener("click", function () {
+  if (imagemobile.getAttribute("src") === "./images/image-product-4.jpg") {
+    imagemobile.setAttribute("src", "./images/image-product-3.jpg");
+  } else if (imagemobile.getAttribute("src") === "./images/image-product-3.jpg") {
+    imagemobile.setAttribute("src", "./images/image-product-2.jpg");
+  } else if (imagemobile.getAttribute("src") === "./images/image-product-2.jpg") {
+    imagemobile.setAttribute("src", "./images/image-product-1.jpg");
+  }else if (imagemobile.getAttribute("src") === "./images/image-product-1.jpg") {
+    imagemobile.setAttribute("src", "./images/image-product-4.jpg");
   }
 });
 

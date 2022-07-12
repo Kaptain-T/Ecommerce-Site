@@ -316,6 +316,10 @@ header {
   height: 300px;
   border-radius: 10px;
 }
+.imagemobile {
+  width: 290px;
+  height: 300px;
+}
 
 .lightbox-thumbnails {
   margin: auto;
@@ -508,16 +512,32 @@ header {
     align-items: center;
     justify-content: center;
 
-    .icon-prev {
+    .icon-prev4mobile {
+      position: absolute;
       top: 50%;
-      left: 8%;
+      left: 5%;
+      border-radius: 50%;
+      background-color: white;
+      padding: 10px 15px;
+      img {
+        width: 15px;
+        height: 15px;
+      }
     }
 
-    .icon-next {
+    .icon-next4mobile {
+      position: absolute;
       top: 50%;
-      right: 8%;
+      right: 5%;
+      padding: 10px 15px;
+      border-radius: 50%;
+      background-color: var(--pale-orange);
+      img {
+        width: 15px;
+        height: 15px;
+      }
     }
-    .image {
+    .imagemobile {
       width: 500px;
       height: 500px;
     }
@@ -610,7 +630,7 @@ header {
     width: 100vw;
   }
   .lightboxcloneCover {
-    .image {
+    .imagemobile {
       width: 100vw;
       height: 450px;
       border-radius: 0;
@@ -669,7 +689,7 @@ header {
 }
 @media screen and (max-width: 450px) {
   .lightboxcloneCover {
-    .image {
+    .imagemobile {
       width: 100vw;
       height: 80vw;
       border-radius: 0;
